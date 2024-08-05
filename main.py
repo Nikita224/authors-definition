@@ -28,7 +28,7 @@ def preprocess_text(text):
     return ' '.join(tokens) # возврат строки с токенами через пробел
 
 # Подключение к базе данных и загрузка данных
-db_path = 'C:/Users/admin/Documents/Practice RosNou/authors definition/db/PubMedArticles-7.db' # ссылка на БД SQLite
+db_path = 'db/PubMedArticles-7.db' # ссылка на БД SQLite
 conn = sqlite3.connect(db_path) # подключение к БД
 query = "SELECT Author, Abstract FROM ArticleStruct" # выбор 2-ух полей (без заголовка текста)
 data = pd.read_sql_query(query, conn) # выполнение запроса
